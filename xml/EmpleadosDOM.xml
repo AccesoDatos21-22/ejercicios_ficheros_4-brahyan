@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Empleados>
+    <empleado>
+        <id>1</id>
+        <nombre>Empleado 1</nombre>
+        <dep>01</dep>
+        <salario>1000.0</salario>
+    </empleado>
+    <empleado>
+        <id>2</id>
+        <nombre>Empleado 2</nombre>
+        <dep>01</dep>
+        <salario>1000.0</salario>
+    </empleado>
+    <empleado>
+        <id>3</id>
+        <nombre>Empleado 3</nombre>
+        <dep>01</dep>
+        <salario>1000.0</salario>
+    </empleado>
+    <empleado>
+        <id>4</id>
+        <nombre>Empleado 4</nombre>
+        <dep>01</dep>
+        <salario>1000.0</salario>
+    </empleado>
+    <empleado>
+        <id>5</id>
+        <nombre>Empleado 5</nombre>
+        <dep>01</dep>
+        <salario>1000.0</salario>
+    </empleado>
+    <empleado>
+        <id>6</id>
+        <nombre>Empleado 6</nombre>
+        <dep>01</dep>
+        <salario>1000.0</salario>
+    </empleado>
+    <empleado>
+        <id>7</id>
+        <nombre>Empleado 7</nombre>
+        <dep>01</dep>
+        <salario>1000.0</salario>
+    </empleado>
+    <empleado>
+        <id>8</id>
+        <nombre>Empleado 8</nombre>
+        <dep>01</dep>
+        <salario>1000.0</salario>
+    </empleado>
+    <empleado>
+        <id>9</id>
+        <nombre>Empleado 9</nombre>
+        <dep>01</dep>
+        <salario>1000.0</salario>
+    </empleado>
+</Empleados>
