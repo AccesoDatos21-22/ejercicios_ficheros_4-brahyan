@@ -1,17 +1,18 @@
 package controler;
 
-import modelo.Medicamento;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Prueba {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		StringBuilder sb = new StringBuilder("");
+		StringBuilder sb = new StringBuilder("e");
 		sb.setLength(7);
-		sb.append("brahyan smith marin");
-		System.out.println(sb.toString());
-
+		System.out.println(sb.toString().length());
+		
+	
 	}
 
 }

@@ -1,1 +1,5 @@
 /target/
+
+#ignora binarios
+**/*.bin
+*.bin

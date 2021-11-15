@@ -6,6 +6,8 @@ public class Medicamento implements Serializable {
 	
 	public final static float IVA = 0.04f;
 	
+	private final static long serialVersionUID = 1L; //Version de la clase
+	
 	private String nombre; // tamaño 30, 60 bytes
 	private double precio; // 8 bytes
 	private int cod; // 4 bytes
