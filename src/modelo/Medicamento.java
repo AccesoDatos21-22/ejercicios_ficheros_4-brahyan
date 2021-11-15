@@ -8,22 +8,32 @@ public class Medicamento implements Serializable {
 	
 	private final static long serialVersionUID = 1L; //Version de la clase
 	
+	private int cod; // 4 bytes
 	private String nombre; // tamaño 30, 60 bytes
 	private double precio; // 8 bytes
-	private int cod; // 4 bytes
 	private int stock; // 4 bytes
 	private int stockMaximo; // 4 bytes
 	private int stockMinimo; // 4 bytes
 	private int codProveedor; // 4 bytes
 
-	public Medicamento() {
+	public Medicamento() { // Constructor por defecto
+		this.cod=0;
 		this.nombre = "";
 		this.precio = 0.0;
-		this.cod=0;
 		this.stock=0;
 		this.stockMaximo=0;
 		this.stockMinimo=0;
 		this.codProveedor=0;
+	}
+	
+	public Medicamento(int codigo, String nombre, double precio, int stockInicial, int stockMaximo, int stockMinimo, int codigoProveedor) {
+		this.cod = codigo;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.stock = stockInicial;
+		this.stockMaximo = stockMaximo;
+		this.stockMinimo = stockMinimo;
+		this.codProveedor = codigoProveedor;
 	}
 	@Override
 	public String toString() {
