@@ -4,6 +4,10 @@ import java.nio.file.Path;
 
 import modelo.Farmacia;
 
+import org.w3c.dom.*;
+
+import javax.xml.parsers.*;
+
 public class FarmaciaDOM{
 
 	/**
@@ -24,6 +28,26 @@ public class FarmaciaDOM{
 	 * @return
 	 */
 	public boolean guardar(Farmacia farmacia) {
+		
+		
+		
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		try{
+			DocumentBuilder builder = factory.newDocumentBuilder();
+			DOMImplementation implementation = builder.getDOMImplementation();
+			Document document = implementation.createDocument(null, "Medicamentos",null);
+			document.setXmlVersion("1.0"); //asignamos la version de nuestro XML
+			
+			Element raiz = document.createElement("Medicamentos"); 				
+			document.getDocumentElement().appendChild(raiz); 
+			
+			
+
+		}catch (Exception e) {
+			
+		}
+			
+
 		return false;
 		
 	}
