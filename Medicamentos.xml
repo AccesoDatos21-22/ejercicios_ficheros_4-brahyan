@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Medicamentos>
+    <medicamento>
+        <Codigo>12</Codigo>
+        <Nombre>aspirina 1gr</Nombre>
+        <Precio>21.5</Precio>
+        <Stock>100</Stock>
+        <StockMaximo>200</StockMaximo>
+        <StockMinimo>12</StockMinimo>
+        <Proveedor>3</Proveedor>
+    </medicamento>
+    <medicamento>
+        <Codigo>2</Codigo>
+        <Nombre>Ibuprofeno</Nombre>
+        <Precio>10.13</Precio>
+        <Stock>50</Stock>
+        <StockMaximo>200</StockMaximo>
+        <StockMinimo>5</StockMinimo>
+        <Proveedor>2</Proveedor>
+    </medicamento>
+    <medicamento>
+        <Codigo>1</Codigo>
+        <Nombre>Naproxeno 500mg</Nombre>
+        <Precio>18.5</Precio>
+        <Stock>210</Stock>
+        <StockMaximo>300</StockMaximo>
+        <StockMinimo>50</StockMinimo>
+        <Proveedor>1</Proveedor>
+    </medicamento>
+</Medicamentos>
