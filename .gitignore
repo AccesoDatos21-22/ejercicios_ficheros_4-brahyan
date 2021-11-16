@@ -3,3 +3,7 @@
 #ignora binarios
 **/*.bin
 *.bin
+
+#ignora ficheros de bytecodes
+*.class
+**/*.class

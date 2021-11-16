@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 import modelo.Medicamento;
@@ -116,14 +117,53 @@ public class MedicamentoAleatorio implements MedicamentoDAO  {
 	@Override
 	public boolean borrar(Medicamento medicamento) {
 		
-		return false;
+		boolean borradoCorrecto = true;
+		//Borra el medicamento sustituyendo todos los campos por caracteres vacios
+		try( RandomAccessFile raf = new RandomAccessFile(fich,"rw") ){
+			raf.seek( (medicamento.getCod() -1) * TAM_REGISTRO );
+			for (int i = 0; i < TAM_REGISTRO/2 ; i++) {
+				raf.writeChar(Character.MIN_VALUE);
+			}
+			
+		}catch (Exception e) {
+			borradoCorrecto = false;
+			System.err.println("Error al borrar el medicamento");
+		}
+		
+		return borradoCorrecto;
 	}
-
-
 
 	@Override
 	public List<Medicamento> leerTodos() {
-		return null;
+		
+		ArrayList<Medicamento> listaMedicamentos = new ArrayList<Medicamento>();
+		
+		try (RandomAccessFile raf = new RandomAccessFile(fich, "r") ){
+			ArrayList<Integer> numeros = new ArrayList<>();
+			for (int i = 0; i < raf.length() ; i+= TAM_REGISTRO) {
+				raf.seek(i);
+				int cod = raf.readInt();
+				//si no se trata de un registro vacio se leen todos los campos
+				//y se añade medicamento a la lista
+				if (cod != 0) {
+					byte[] nombreBytes = new byte[TAM_NOMBRE*2];
+					raf.read(nombreBytes);
+					String nombreMed =  new String( nombreBytes );
+					double precio = raf.readDouble();
+					int stock = raf.readInt();
+					int stockMaximo = raf.readInt();
+					int stockMinimo = raf.readInt();
+					int proveedor = raf.readInt();
+					
+					listaMedicamentos.add( new Medicamento(cod,nombreMed,precio,stock,stockMaximo,stockMinimo,proveedor) );
+				}
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return listaMedicamentos;
 	}
 
 }
